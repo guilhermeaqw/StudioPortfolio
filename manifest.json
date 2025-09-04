@@ -1,0 +1,16 @@
+{
+  "name": "LOVE STUDIOS - Portfolio Criativo",
+  "short_name": "LOVE STUDIOS",
+  "description": "Estúdio criativo especializado em desenvolvimento Roblox, arte digital e experiências interativas",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#DE1A12",
+  "orientation": "portrait-primary",
+  "icons": [],
+  "categories": ["art", "design", "games"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "scope": "./",
+  "prefer_related_applications": false
+}

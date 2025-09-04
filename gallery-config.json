@@ -1,0 +1,1136 @@
+{
+  "concept-art": {
+    "title": "Concept Art",
+    "description": "Arte conceitual original criada para dar vida a mundos fantásticos. Cada peça é desenvolvida com atenção aos detalhes.",
+    "filters": [
+      {
+        "id": "all",
+        "name": "Todos"
+      },
+      {
+        "id": "character",
+        "name": "Personagens"
+      },
+      {
+        "id": "environment",
+        "name": "Ambientes"
+      },
+      {
+        "id": "creature",
+        "name": "Criaturas"
+      },
+      {
+        "id": "props",
+        "name": "Props"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "character",
+        "image": "ConceptArt/1.jpg",
+        "title": "Conceptart - Item 1",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 2,
+        "category": "character",
+        "image": "ConceptArt/2.jpg",
+        "title": "Conceptart - Item 2",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 3,
+        "category": "character",
+        "image": "ConceptArt/3.jpg",
+        "title": "Conceptart - Item 3",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 4,
+        "category": "character",
+        "image": "ConceptArt/4.jpg",
+        "title": "Conceptart - Item 4",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 5,
+        "category": "character",
+        "image": "ConceptArt/5.jpg",
+        "title": "Conceptart - Item 5",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 6,
+        "category": "character",
+        "image": "ConceptArt/6.jpg",
+        "title": "Conceptart - Item 6",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 7,
+        "category": "character",
+        "image": "ConceptArt/7.jpg",
+        "title": "Conceptart - Item 7",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 8,
+        "category": "character",
+        "image": "ConceptArt/8.jpg",
+        "title": "Conceptart - Item 8",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 9,
+        "category": "character",
+        "image": "ConceptArt/9.jpg",
+        "title": "Conceptart - Item 9",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 10,
+        "category": "character",
+        "image": "ConceptArt/10.jpg",
+        "title": "Conceptart - Item 10",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 11,
+        "category": "character",
+        "image": "ConceptArt/11.jpg",
+        "title": "Conceptart - Item 11",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 12,
+        "category": "character",
+        "image": "ConceptArt/12.jpg",
+        "title": "Conceptart - Item 12",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 13,
+        "category": "character",
+        "image": "ConceptArt/13.jpg",
+        "title": "Conceptart - Item 13",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 14,
+        "category": "character",
+        "image": "ConceptArt/14.jpg",
+        "title": "Conceptart - Item 14",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 15,
+        "category": "character",
+        "image": "ConceptArt/15.jpg",
+        "title": "Conceptart - Item 15",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 16,
+        "category": "character",
+        "image": "ConceptArt/16.jpg",
+        "title": "Conceptart - Item 16",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 17,
+        "category": "character",
+        "image": "ConceptArt/17.jpg",
+        "title": "Conceptart - Item 17",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 18,
+        "category": "character",
+        "image": "ConceptArt/18.jpg",
+        "title": "Conceptart - Item 18",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 19,
+        "category": "character",
+        "image": "ConceptArt/19.gif",
+        "title": "Conceptart - Item 19",
+        "description": "Animated GIF",
+        "isVideo": false,
+        "isGif": true
+      },
+      {
+        "id": 20,
+        "category": "character",
+        "image": "ConceptArt/20.jpg",
+        "title": "Conceptart - Item 20",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 21,
+        "category": "character",
+        "image": "ConceptArt/21.png",
+        "title": "Conceptart - Item 21",
+        "description": "Conceptart - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 22,
+        "category": "character",
+        "image": "ConceptArt/22.jpg",
+        "title": "Conceptart - Item 22",
+        "description": "Conceptart - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      }
+    ]
+  },
+  "illustration": {
+    "title": "Illustration",
+    "description": "Ilustrações digitais detalhadas que contam histórias visuais únicas. Cada obra é criada com paixão e atenção aos detalhes.",
+    "filters": [
+      {
+        "id": "all",
+        "name": "Todos"
+      },
+      {
+        "id": "portrait",
+        "name": "Retratos"
+      },
+      {
+        "id": "environment",
+        "name": "Ambientes"
+      },
+      {
+        "id": "character",
+        "name": "Personagens"
+      },
+      {
+        "id": "creature",
+        "name": "Criaturas"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "portrait",
+        "image": "Illustration/1.jpg",
+        "title": "Illustration - Item 1",
+        "description": "Illustration - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 2,
+        "category": "portrait",
+        "image": "Illustration/2.jpg",
+        "title": "Illustration - Item 2",
+        "description": "Illustration - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      }
+    ]
+  },
+  "3d-model": {
+    "title": "3D Model",
+    "description": "Modelos 3D otimizados para Roblox com alta qualidade visual. Criamos assets únicos e detalhados.",
+    "filters": [
+      {
+        "id": "all",
+        "name": "Todos"
+      },
+      {
+        "id": "character",
+        "name": "Personagens"
+      },
+      {
+        "id": "vehicle",
+        "name": "Veículos"
+      },
+      {
+        "id": "weapon",
+        "name": "Armas"
+      },
+      {
+        "id": "building",
+        "name": "Construções"
+      },
+      {
+        "id": "stud",
+        "name": "Stud"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "character",
+        "image": "3DModel/1-P.jpg",
+        "title": "1 P",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 2,
+        "category": "character",
+        "image": "3DModel/2-P.png",
+        "title": "2 P",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 3,
+        "category": "character",
+        "image": "3DModel/3-P.jpg",
+        "title": "3 P",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 4,
+        "category": "character",
+        "image": "3DModel/4-P.jpg",
+        "title": "4 P",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 5,
+        "category": "character",
+        "image": "3DModel/5-P.jpg",
+        "title": "5 P",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 6,
+        "category": "character",
+        "image": "3DModel/6-C.png",
+        "title": "6 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 7,
+        "category": "character",
+        "image": "3DModel/7-C.png",
+        "title": "7 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 8,
+        "category": "character",
+        "image": "3DModel/8-C.png",
+        "title": "8 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 9,
+        "category": "character",
+        "image": "3DModel/9-C.png",
+        "title": "9 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 10,
+        "category": "character",
+        "image": "3DModel/10-C.png",
+        "title": "10 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 11,
+        "category": "character",
+        "image": "3DModel/11-C.png",
+        "title": "11 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 12,
+        "category": "character",
+        "image": "3DModel/12-C.jpg",
+        "title": "12 C",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 13,
+        "category": "character",
+        "image": "3DModel/13-V.jpg",
+        "title": "13 V",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 14,
+        "category": "character",
+        "image": "3DModel/14-V.jpg",
+        "title": "14 V",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 15,
+        "category": "character",
+        "image": "3DModel/15-V.png",
+        "title": "15 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 16,
+        "category": "character",
+        "image": "3DModel/16-V.png",
+        "title": "16 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 17,
+        "category": "character",
+        "image": "3DModel/17-V.png",
+        "title": "17 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 18,
+        "category": "character",
+        "image": "3DModel/18-V.png",
+        "title": "18 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 19,
+        "category": "character",
+        "image": "3DModel/19-V.png",
+        "title": "19 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 20,
+        "category": "character",
+        "image": "3DModel/20-V.png",
+        "title": "20 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 21,
+        "category": "character",
+        "image": "3DModel/21-V.png",
+        "title": "21 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 22,
+        "category": "character",
+        "image": "3DModel/22-V.png",
+        "title": "22 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 23,
+        "category": "character",
+        "image": "3DModel/23-V.png",
+        "title": "23 V",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 24,
+        "category": "character",
+        "image": "3DModel/24-W.jpg",
+        "title": "24 W",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 25,
+        "category": "character",
+        "image": "3DModel/25-W.jpg",
+        "title": "25 W",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 27,
+        "category": "character",
+        "image": "3DModel/27-W.png",
+        "title": "27 W",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 28,
+        "category": "character",
+        "image": "3DModel/28-W.png",
+        "title": "28 W",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 29,
+        "category": "character",
+        "image": "3DModel/29-W.jpg",
+        "title": "29 W",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 30,
+        "category": "character",
+        "image": "3DModel/30-W.jpg",
+        "title": "30 W",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 31,
+        "category": "character",
+        "image": "3DModel/31-C.jpg",
+        "title": "31 C",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 32,
+        "category": "character",
+        "image": "3DModel/32-C.jpg",
+        "title": "32 C",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 33,
+        "category": "character",
+        "image": "3DModel/33-C.jpg",
+        "title": "33 C",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 34,
+        "category": "character",
+        "image": "3DModel/34-C.jpg",
+        "title": "34 C",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 35,
+        "category": "character",
+        "image": "3DModel/35-C.jpg",
+        "title": "35 C",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 36,
+        "category": "character",
+        "image": "3DModel/36-C.png",
+        "title": "36 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 37,
+        "category": "character",
+        "image": "3DModel/37-C.png",
+        "title": "37 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 38,
+        "category": "character",
+        "image": "3DModel/38-C.png",
+        "title": "38 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 39,
+        "category": "character",
+        "image": "3DModel/39-C.png",
+        "title": "39 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 40,
+        "category": "character",
+        "image": "3DModel/40-C.png",
+        "title": "40 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 41,
+        "category": "character",
+        "image": "3DModel/41-C.png",
+        "title": "41 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 42,
+        "category": "character",
+        "image": "3DModel/42-C.png",
+        "title": "42 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 43,
+        "category": "character",
+        "image": "3DModel/43-C.png",
+        "title": "43 C",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 44,
+        "category": "character",
+        "image": "3DModel/44-C.jpg",
+        "title": "44 C",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 45,
+        "category": "character",
+        "image": "3DModel/45-W.jpg",
+        "title": "45 W",
+        "description": "3Dmodel - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 46,
+        "category": "character",
+        "image": "3DModel/46-ST.png",
+        "title": "46 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 47,
+        "category": "character",
+        "image": "3DModel/47-ST.png",
+        "title": "47 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 48,
+        "category": "character",
+        "image": "3DModel/48-ST.png",
+        "title": "48 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 49,
+        "category": "character",
+        "image": "3DModel/49-ST.png",
+        "title": "49 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 50,
+        "category": "character",
+        "image": "3DModel/50-ST.png",
+        "title": "50 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 51,
+        "category": "character",
+        "image": "3DModel/51-ST.png",
+        "title": "51 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 52,
+        "category": "character",
+        "image": "3DModel/52-ST.png",
+        "title": "52 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 53,
+        "category": "character",
+        "image": "3DModel/53-ST.png",
+        "title": "53 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 54,
+        "category": "character",
+        "image": "3DModel/54-ST.png",
+        "title": "54 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 55,
+        "category": "character",
+        "image": "3DModel/55-ST.png",
+        "title": "55 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 56,
+        "category": "character",
+        "image": "3DModel/56-ST.png",
+        "title": "56 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 57,
+        "category": "character",
+        "image": "3DModel/57-ST.png",
+        "title": "57 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 58,
+        "category": "character",
+        "image": "3DModel/58-ST.png",
+        "title": "58 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 59,
+        "category": "character",
+        "image": "3DModel/59-ST.png",
+        "title": "59 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 60,
+        "category": "character",
+        "image": "3DModel/60-ST.png",
+        "title": "60 St",
+        "description": "3Dmodel - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      }
+    ]
+  },
+  "buildings": {
+    "title": "Buildings",
+    "description": "Arquiteturas e ambientes imersivos que criam mundos únicos. Desenvolvemos cenários detalhados e atmosféricos.",
+    "filters": [
+      {
+        "id": "all",
+        "name": "Todos"
+      },
+      {
+        "id": "medieval",
+        "name": "Medieval"
+      },
+      {
+        "id": "modern",
+        "name": "Moderno"
+      },
+      {
+        "id": "futuristic",
+        "name": "Futurista"
+      },
+      {
+        "id": "natural",
+        "name": "Natural"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "medieval",
+        "image": "Buildings/1.png",
+        "title": "Buildings - Item 1",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 2,
+        "category": "medieval",
+        "image": "Buildings/2.mp4",
+        "title": "Buildings - Item 2",
+        "description": "Video File",
+        "isVideo": true,
+        "isGif": false
+      },
+      {
+        "id": 3,
+        "category": "medieval",
+        "image": "Buildings/3.png",
+        "title": "Buildings - Item 3",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 4,
+        "category": "medieval",
+        "image": "Buildings/4.png",
+        "title": "Buildings - Item 4",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 5,
+        "category": "medieval",
+        "image": "Buildings/5.png",
+        "title": "Buildings - Item 5",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 7,
+        "category": "medieval",
+        "image": "Buildings/7.png",
+        "title": "Buildings - Item 7",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 8,
+        "category": "medieval",
+        "image": "Buildings/8.mp4",
+        "title": "Buildings - Item 8",
+        "description": "Video File",
+        "isVideo": true,
+        "isGif": false
+      },
+      {
+        "id": 9,
+        "category": "medieval",
+        "image": "Buildings/9.mp4",
+        "title": "Buildings - Item 9",
+        "description": "Video File",
+        "isVideo": true,
+        "isGif": false
+      },
+      {
+        "id": 10,
+        "category": "medieval",
+        "image": "Buildings/10.png",
+        "title": "Buildings - Item 10",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 11,
+        "category": "medieval",
+        "image": "Buildings/11.png",
+        "title": "Buildings - Item 11",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 12,
+        "category": "medieval",
+        "image": "Buildings/12.png",
+        "title": "Buildings - Item 12",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 13,
+        "category": "medieval",
+        "image": "Buildings/13.png",
+        "title": "Buildings - Item 13",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 14,
+        "category": "medieval",
+        "image": "Buildings/14.png",
+        "title": "Buildings - Item 14",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 15,
+        "category": "medieval",
+        "image": "Buildings/15.png",
+        "title": "Buildings - Item 15",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 16,
+        "category": "medieval",
+        "image": "Buildings/16.png",
+        "title": "Buildings - Item 16",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 17,
+        "category": "medieval",
+        "image": "Buildings/17.png",
+        "title": "Buildings - Item 17",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 18,
+        "category": "medieval",
+        "image": "Buildings/18.png",
+        "title": "Buildings - Item 18",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 19,
+        "category": "medieval",
+        "image": "Buildings/19.png",
+        "title": "Buildings - Item 19",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 20,
+        "category": "medieval",
+        "image": "Buildings/20.png",
+        "title": "Buildings - Item 20",
+        "description": "Buildings - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 21,
+        "category": "medieval",
+        "image": "Buildings/21.jpg",
+        "title": "Buildings - Item 21",
+        "description": "Buildings - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 22,
+        "category": "medieval",
+        "image": "Buildings/22.jpg",
+        "title": "Buildings - Item 22",
+        "description": "Buildings - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 23,
+        "category": "medieval",
+        "image": "Buildings/23.jpg",
+        "title": "Buildings - Item 23",
+        "description": "Buildings - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 24,
+        "category": "medieval",
+        "image": "Buildings/24.mp4",
+        "title": "Buildings - Item 24",
+        "description": "Video File",
+        "isVideo": true,
+        "isGif": false
+      },
+      {
+        "id": 25,
+        "category": "medieval",
+        "image": "Buildings/25.jpg",
+        "title": "Buildings - Item 25",
+        "description": "Buildings - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 26,
+        "category": "medieval",
+        "image": "Buildings/26.jpg",
+        "title": "Buildings - Item 26",
+        "description": "Buildings - JPG Image",
+        "isVideo": false,
+        "isGif": false
+      }
+    ]
+  },
+  "gui-ui": {
+    "title": "GUI/UI",
+    "description": "Interfaces intuitivas para Roblox com design moderno e funcional. Criamos UIs que melhoram a experiência do usuário.",
+    "filters": [
+      {
+        "id": "all",
+        "name": "Todos"
+      },
+      {
+        "id": "menu",
+        "name": "Menus"
+      },
+      {
+        "id": "game",
+        "name": "Game UI"
+      },
+      {
+        "id": "shop",
+        "name": "Loja"
+      },
+      {
+        "id": "settings",
+        "name": "Configurações"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "menu",
+        "image": "GUI-UI/1.png",
+        "title": "Gui Ui - Item 1",
+        "description": "Gui Ui - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      },
+      {
+        "id": 2,
+        "category": "menu",
+        "image": "GUI-UI/2.png",
+        "title": "Gui Ui - Item 2",
+        "description": "Gui Ui - PNG Image",
+        "isVideo": false,
+        "isGif": false
+      }
+    ]
+  }
+}

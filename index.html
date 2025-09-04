@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE STUDIOS - Portfolio Criativo</title>
+    <meta name="description" content="LOVE STUDIOS - Estúdio criativo especializado em desenvolvimento de jogos, arte digital e experiências interativas.">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: *; media-src 'self' data: blob: *; connect-src 'self';">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Roblox, desenvolvimento, arte digital, 3D, animação, concept art, rigging, modelagem">
+    <meta name="author" content="LOVE STUDIOS">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LOVE STUDIOS - Portfolio Criativo">
+    <meta property="og:description" content="Estúdio criativo especializado em desenvolvimento Roblox, arte digital e experiências interativas">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lovestudios.com">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:site_name" content="LOVE STUDIOS">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LOVE STUDIOS - Portfolio Criativo">
+    <meta name="twitter:description" content="Estúdio criativo especializado em desenvolvimento Roblox">
+    <meta name="twitter:image" content="/og-image.jpg">
+    
+    <!-- Theme and Icons -->
+    <meta name="theme-color" content="#DE1A12">
+    <meta name="msapplication-TileColor" content="#DE1A12">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./styles.css" as="style">
+    <link rel="preload" href="./script.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- Critical CSS -->
+    <style>
+      /* CSS crítico para renderização inicial */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: 'Inter', sans-serif; background: #0A0A0A; color: white; }
+      .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(20px); }
+      .nav-container { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+      .nav-logo { font-size: 1.5rem; font-weight: 700; color: white; text-decoration: none; }
+      .page { display: none; }
+      .page.active { display: block; }
+      .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
+      .hero-title { font-size: 3rem; font-weight: 900; margin-bottom: 1rem; }
+      .hero-subtitle { font-size: 1.2rem; opacity: 0.8; margin-bottom: 2rem; }
+      .btn { display: inline-block; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; }
+      .btn-primary { background: linear-gradient(135deg, #DE1A12 0%, #FF6B35 100%); color: white; }
+      .btn-secondary { background: transparent; color: white; border: 2px solid rgba(255, 255, 255, 0.2); }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(222, 26, 18, 0.3); }
+      
+      /* Loading indicator */
+      .loading-indicator { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; }
+      .loading-spinner { width: 40px; height: 40px; border: 4px solid rgba(222, 26, 18, 0.3); border-top: 4px solid #DE1A12; border-radius: 50%; animation: spin 1s linear infinite; }
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(registration => {
+              console.log('SW registrado: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW falhou: ', registrationError);
+            });
+        });
+      }
+      
+      // Carregar manifest apenas se não for file://
+      if (window.location.protocol !== 'file:') {
+        const manifestLink = document.createElement('link');
+        manifestLink.rel = 'manifest';
+        manifestLink.href = './manifest.json';
+        document.head.appendChild(manifestLink);
+      }
+    </script>
+  </head>
+<body>
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loadingIndicator">
+        <div class="loading-spinner"></div>
+    </div>
+    
+
+    
+    <!-- Performance Monitor -->
+    <div class="performance-monitor" id="performanceMonitor">
+        <div>FPS: <span id="fpsCounter">60</span></div>
+        <div>Mem: <span id="memoryUsage">0</span>MB</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">LOVE STUDIOS</a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#script" class="nav-link">Script</a>
+                <a href="#concept-art" class="nav-link">Concept Art</a>
+                <a href="#illustration" class="nav-link">Illustration</a>
+                <a href="#rig" class="nav-link">Rig</a>
+                <a href="#3d-model" class="nav-link">3D Model</a>
+                <a href="#buildings" class="nav-link">Buildings</a>
+                <a href="#animations" class="nav-link">Animations</a>
+                <a href="#gui-ui" class="nav-link">GUI/UI</a>
+            </div>
+            
+            <!-- Right side controls -->
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="language-btn" id="languageBtn">
+                        <span class="language-flag">🇧🇷</span>
+                        <span class="language-arrow">▼</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option" data-lang="pt">
+                            <span class="language-flag">🇧🇷</span>
+                            <span class="language-text">Português</span>
+                        </div>
+                        <div class="language-option" data-lang="en">
+                            <span class="language-flag">🇺🇸</span>
+                            <span class="language-text">English</span>
+                        </div>
+                        <div class="language-option" data-lang="es">
+                            <span class="language-flag">🇪🇸</span>
+                            <span class="language-text">Español</span>
+                        </div>
+                        <div class="language-option" data-lang="fr">
+                            <span class="language-flag">🇫🇷</span>
+                            <span class="language-text">Français</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-bg"></div>
+                <div class="particle-system">
+                    <div class="particles-container"></div>
+                    <div class="scroll-particles"></div>
+                    <div class="ambient-particles"></div>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title" id="typing-title">LOVE STUDIOS</h1>
+                    <p class="hero-subtitle" id="typing-subtitle">Creating extraordinary experiences on Roblox</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">View Portfolio</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats">
+                <div class="container">
+                    <div class="stats-header">
+                        <h2>Our Experience</h2>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🚀</div>
+                            <div class="stat-number">200+</div>
+                            <p>Projects Developed</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">👥</div>
+                            <div class="stat-number">150+</div>
+                            <p>Satisfied Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories Section -->
+            <section id="services" class="categories">
+                <div class="container">
+                    <div class="categories-header">
+                        <h2>Our Services</h2>
+                    </div>
+                    <div class="categories-grid">
+                        <a href="#script" class="category-card purple">
+                            <div class="p-4">
+                                <div class="category-icon purple"></div>
+                                <h3>Script</h3>
+                                <p>Advanced systems for Roblox experiences</p>
+                            </div>
+                        </a>
+                        <a href="#concept-art" class="category-card blue">
+                            <div class="p-4">
+                                <div class="category-icon blue"></div>
+                                <h3>Concept Art</h3>
+                                <p>Conceptual art for unique worlds</p>
+                            </div>
+                        </a>
+                        <a href="#illustration" class="category-card green">
+                            <div class="p-4">
+                                <div class="category-icon green"></div>
+                                <h3>Illustration</h3>
+                                <p>Detailed digital illustrations</p>
+                            </div>
+                        </a>
+                        <a href="#rig" class="category-card yellow">
+                            <div class="p-4">
+                                <div class="category-icon yellow"></div>
+                                <h3>Rig</h3>
+                                <p>Professional character rigging</p>
+                            </div>
+                        </a>
+                        <a href="#3d-model" class="category-card red">
+                            <div class="p-4">
+                                <div class="category-icon red"></div>
+                                <h3>3D Model</h3>
+                                <p>Optimized 3D models for Roblox</p>
+                            </div>
+                        </a>
+                        <a href="#buildings" class="category-card indigo">
+                            <div class="p-4">
+                                <div class="category-icon indigo"></div>
+                                <h3>Buildings</h3>
+                                <p>Immersive architectures and environments</p>
+                            </div>
+                        </a>
+                        <a href="#animations" class="category-card teal">
+                            <div class="p-4">
+                                <div class="category-icon teal"></div>
+                                <h3>Animations</h3>
+                                <p>Fluid and expressive animations</p>
+                            </div>
+                        </a>
+                        <a href="#gui-ui" class="category-card orange">
+                            <div class="p-4">
+                                <div class="category-icon orange"></div>
+                                <h3>GUI/UI</h3>
+                                <p>Intuitive interfaces for Roblox</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Contact Form Section -->
+            <section class="contact">
+                <div class="container">
+                    <div class="contact-header">
+                        <h2>Let's Create Together</h2>
+                        <p>Transform your idea into reality with our Roblox development expertise</p>
+                    </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project">Project Type</label>
+                                    <select id="project" name="project" required>
+                                        <option value="">Select type</option>
+                                        <option value="script">Script/Programming</option>
+                                        <option value="concept-art">Concept Art</option>
+                                        <option value="illustration">Illustration</option>
+                                        <option value="rig">Character Rigging</option>
+                                        <option value="3d-model">3D Models</option>
+                                        <option value="buildings">Buildings/Scenarios</option>
+                                        <option value="animations">Animations</option>
+                                        <option value="gui-ui">GUI/UI Design</option>
+                                        <option value="complete">Complete Project</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="budget">Estimated Budget</label>
+                                    <select id="budget" name="budget" required>
+                                        <option value="">Budget range</option>
+                                        <option value="500-1000">$500 - $1,000</option>
+                                        <option value="1000-3000">$1,000 - $3,000</option>
+                                        <option value="3000-5000">$3,000 - $5,000</option>
+                                        <option value="5000+">$5,000+</option>
+                                        <option value="discuss">Prefer to discuss</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Project Description</label>
+                                <textarea id="description" name="description" required placeholder="Describe your project in detail: objectives, desired style, deadline, references, etc." rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about">
+                <div class="container">
+                    <div class="about-header">
+                        <h2>Sobre LOVE STUDIOS</h2>
+                        <p>Mais que um estúdio, somos parceiros na criação de experiências extraordinárias</p>
+                    </div>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Nossa Missão</h3>
+                            <p>Fundado com a paixão pela inovação, o LOVE STUDIOS é especializado em desenvolvimento para Roblox. Combinamos programação avançada, design excepcional e storytelling envolvente para criar experiências que conectam jogadores e constroem comunidades duradouras na plataforma.</p>
+                            <p>Nossa equipe multidisciplinar domina todas as facetas do desenvolvimento Roblox, desde scripts complexos até arte conceitual impressionante, garantindo que cada projeto seja uma obra-prima técnica e visual.</p>
+                        </div>
+                        <div class="about-features">
+                            <h3>Por que Nos Escolher?</h3>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎯</div>
+                                    <div>
+                                        <h4>Foco em Resultados</h4>
+                                        <p>Projetos que superam expectativas e geram resultados mensuráveis</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🏆</div>
+                                    <div>
+                                        <h4>Excelência Comprovada</h4>
+                                        <p>8+ anos de experiência com 200+ projetos entregues</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">⚡</div>
+                                    <div>
+                                        <h4>Inovação Constante</h4>
+                                        <p>Sempre na vanguarda das tecnologias e tendências do Roblox</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">⭐</div>
+                            <h3>Qualidade Premium</h3>
+                            <p>Cada pixel, cada linha de código é cuidadosamente pensada para entregar excelência</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">👥</div>
+                            <h3>Parceria Verdadeira</h3>
+                            <p>Não somos apenas fornecedores, somos parceiros investidos no seu sucesso</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🛡️</div>
+                            <h3>Confiança Total</h3>
+                            <p>Transparência, comunicação clara e cumprimento de prazos em todos os projetos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Script Page -->
+        <section id="script" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Script</h1>
+                <p class="page-description">Scripts e sistemas avançados para Roblox com funcionalidades únicas.</p>
+            </div>
+            <div class="container">
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <!-- Filtros serão gerados dinamicamente -->
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Vídeos serão carregados dinamicamente -->
+                </div>
+                <div class="tech-stack">
+                    <h3>Tecnologias Utilizadas</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">LUA</div>
+                            <h4>Luau/Lua</h4>
+                            <p>Scripts otimizados para Roblox</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔧</div>
+                            <h4>Rojo</h4>
+                            <p>Sync de código com VSCode</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔗</div>
+                            <h4>Knit</h4>
+                            <p>Framework para estruturação</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">📦</div>
+                            <h4>Git</h4>
+                            <p>Controle de versão</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept Art Page -->
+        <section id="concept-art" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Concept Art</h1>
+                <p class="page-description">Arte conceitual original criada para dar vida a mundos fantásticos.</p>
+            </div>
+            <div class="container">
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <!-- Filtros serão gerados dinamicamente -->
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Imagens serão carregadas dinamicamente -->
+                </div>
+
+                <div class="tech-stack">
+                    <h3>Ferramentas de Concept Art</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🎨</div>
+                            <h4>Photoshop</h4>
+                            <p>Edição e pintura digital</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🖌️</div>
+                            <h4>Clip Studio Paint</h4>
+                            <p>Ilustração e concept art</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔧</div>
+                            <h4>Blender</h4>
+                            <p>Modelagem 3D e concept</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Illustration Page -->
+        <section id="illustration" class="page">
+            <div class="page-header">
+                <h1>Illustration</h1>
+                <p>Ilustrações digitais detalhadas que contam histórias visuais únicas. Cada obra é criada com paixão e atenção aos detalhes.</p>
+            </div>
+            <div class="container">
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="portrait">Retratos</button>
+                    <button class="filter-btn" data-filter="environment">Ambientes</button>
+                    <button class="filter-btn" data-filter="character">Personagens</button>
+                    <button class="filter-btn" data-filter="creature">Criaturas</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="portrait">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Retrato Digital">
+                        <div class="gallery-overlay">
+                            <h3>Retrato Digital - Personagem Fantasia</h3>
+                            <p>Digital Portrait</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="environment">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Cenário Urbano">
+                        <div class="gallery-overlay">
+                            <h3>Cenário Urbano - Cidade Futurista</h3>
+                            <p>Environment Art</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="creature">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Creature Design">
+                        <div class="gallery-overlay">
+                            <h3>Creature Design - Dragão Místico</h3>
+                            <p>Creature Design</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="character">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Character Sheet">
+                        <div class="gallery-overlay">
+                            <h3>Character Sheet - Guerreiro</h3>
+                            <p>Character Design</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="environment">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Ambiente Floresta">
+                        <div class="gallery-overlay">
+                            <h3>Ambiente - Floresta Encantada</h3>
+                            <p>Environment Art</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="character">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Props Design">
+                        <div class="gallery-overlay">
+                            <h3>Props Design - Armas Mágicas</h3>
+                            <p>Props Design</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="portrait">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Retrato Místico">
+                        <div class="gallery-overlay">
+                            <h3>Retrato Místico - Feiticeira</h3>
+                            <p>Digital Portrait</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="environment">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Castelo Medieval">
+                        <div class="gallery-overlay">
+                            <h3>Castelo Medieval - Vista Noturna</h3>
+                            <p>Environment Art</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="creature">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Fênix">
+                        <div class="gallery-overlay">
+                            <h3>Fênix de Cristal - Criatura Lendária</h3>
+                            <p>Creature Design</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="character">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Ninja">
+                        <div class="gallery-overlay">
+                            <h3>Ninja das Sombras - Character Sheet</h3>
+                            <p>Character Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>Estilo Artístico</h3>
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="process-step-icon">🎨</div>
+                            <h4>Realismo Digital</h4>
+                            <p>Ilustrações com alta fidelidade visual</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">✨</div>
+                            <h4>Estilo Fantasia</h4>
+                            <p>Arte conceitual para mundos imaginários</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">🎭</div>
+                            <h4>Character Design</h4>
+                            <p>Desenvolvimento de personagens únicos</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">🏰</div>
+                            <h4>Environment Art</h4>
+                            <p>Criação de ambientes imersivos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rig Page -->
+        <section id="rig" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Rig</h1>
+                <p class="page-description">Character rigging profissional para animações fluidas e expressivas.</p>
+            </div>
+            <div class="container">
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Mídias serão carregadas dinamicamente -->
+                </div>
+
+                <div class="tech-stack">
+                    <h3>Ferramentas de Rigging</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🎭</div>
+                            <h4>Blender</h4>
+                            <p>Rigging e animação 3D</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">⚡</div>
+                            <h4>Auto-Rig Pro</h4>
+                            <p>Automação de rigging</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Model Page -->
+        <section id="3d-model" class="page">
+            <div class="page-header">
+                <h1>3D Model</h1>
+                <p>Modelos 3D otimizados para Roblox com alta qualidade visual. Criamos assets únicos e detalhados.</p>
+            </div>
+            <div class="container">
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="character">Personagens</button>
+                    <button class="filter-btn" data-filter="vehicle">Veículos</button>
+                    <button class="filter-btn" data-filter="weapon">Armas</button>
+                    <button class="filter-btn" data-filter="building">Construções</button>
+                    <button class="filter-btn" data-filter="stud">Stud</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="character">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Character Model">
+                        <div class="gallery-overlay">
+                            <h3>Character Model - Guerreiro</h3>
+                            <p>3D Character</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="vehicle">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Vehicle Model">
+                        <div class="gallery-overlay">
+                            <h3>Vehicle Model - Carro Futurista</h3>
+                            <p>3D Vehicle</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="weapon">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Weapon Model">
+                        <div class="gallery-overlay">
+                            <h3>Weapon Model - Espada Mágica</h3>
+                            <p>3D Weapon</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="building">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Building Model">
+                        <div class="gallery-overlay">
+                            <h3>Building Model - Castelo</h3>
+                            <p>3D Building</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="character">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Mage Character">
+                        <div class="gallery-overlay">
+                            <h3>Mage Character - Feiticeiro</h3>
+                            <p>3D Character</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="vehicle">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Spaceship">
+                        <div class="gallery-overlay">
+                            <h3>Spaceship - Nave Espacial</h3>
+                            <p>3D Vehicle</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="weapon">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Bow Weapon">
+                        <div class="gallery-overlay">
+                            <h3>Bow Weapon - Arco Élfico</h3>
+                            <p>3D Weapon</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="building">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Tower">
+                        <div class="gallery-overlay">
+                            <h3>Tower - Torre Mágica</h3>
+                            <p>3D Building</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="character">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Robot Character">
+                        <div class="gallery-overlay">
+                            <h3>Robot Character - Androide</h3>
+                            <p>3D Character</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="vehicle">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Motorcycle">
+                        <div class="gallery-overlay">
+                            <h3>Motorcycle - Moto Futurista</h3>
+                            <p>3D Vehicle</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <h3>Software de Modelagem</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🎨</div>
+                            <h4>Blender</h4>
+                            <p>Modelagem e texturização</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">⚡</div>
+                            <h4>Substance</h4>
+                            <p>Texturização avançada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buildings Page -->
+        <section id="buildings" class="page">
+            <div class="page-header">
+                <h1>Buildings</h1>
+                <p>Arquiteturas e ambientes imersivos que criam mundos únicos. Desenvolvemos cenários detalhados e atmosféricos.</p>
+            </div>
+            <div class="container">
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="medieval">Medieval</button>
+                    <button class="filter-btn" data-filter="modern">Moderno</button>
+                    <button class="filter-btn" data-filter="futuristic">Futurista</button>
+                    <button class="filter-btn" data-filter="natural">Natural</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="medieval">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Castelo Medieval">
+                        <div class="gallery-overlay">
+                            <h3>Castelo Medieval - Exterior</h3>
+                            <p>Medieval Architecture</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="futuristic">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Cidade Futurista">
+                        <div class="gallery-overlay">
+                            <h3>Cidade Futurista - Skyline</h3>
+                            <p>Futuristic Architecture</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="medieval">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Dungeon">
+                        <div class="gallery-overlay">
+                            <h3>Dungeon - Interior</h3>
+                            <p>Medieval Interior</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="natural">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Vila Rural">
+                        <div class="gallery-overlay">
+                            <h3>Vila Rural - Ambiente</h3>
+                            <p>Natural Environment</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="modern">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Torre Moderna">
+                        <div class="gallery-overlay">
+                            <h3>Torre Moderna - Edifício</h3>
+                            <p>Modern Architecture</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="futuristic">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Base Espacial">
+                        <div class="gallery-overlay">
+                            <h3>Base Espacial - Estação</h3>
+                            <p>Futuristic Base</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="medieval">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Catedral">
+                        <div class="gallery-overlay">
+                            <h3>Catedral Gótica - Interior</h3>
+                            <p>Gothic Architecture</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="natural">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Casa na Árvore">
+                        <div class="gallery-overlay">
+                            <h3>Casa na Árvore - Elfa</h3>
+                            <p>Natural Building</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-section">
+                    <h3>Tipos de Construção</h3>
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="process-step-icon">🏰</div>
+                            <h4>Arquitetura Medieval</h4>
+                            <p>Castelos, fortalezas e vilas medievais</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">🏙️</div>
+                            <h4>Ambientes Urbanos</h4>
+                            <p>Cidades modernas e futuristas</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">🌲</div>
+                            <h4>Ambientes Naturais</h4>
+                            <p>Florestas, montanhas e paisagens</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">🏭</div>
+                            <h4>Estruturas Industriais</h4>
+                            <p>Fábricas, laboratórios e instalações</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animations Page -->
+        <section id="animations" class="page">
+            <div class="page-header">
+                <h1>Animations</h1>
+                <p>Animações fluidas e expressivas que dão vida aos personagens. Criamos movimentos naturais e impactantes.</p>
+            </div>
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">Animations</h1>
+                    <p class="page-description">Animações fluidas e expressivas que dão vida aos personagens.</p>
+                </div>
+                
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <!-- Filtros serão gerados dinamicamente -->
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Vídeos serão carregados dinamicamente -->
+                </div>
+                <div class="tech-stack">
+                    <h3>Software de Animação</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🎬</div>
+                            <h4>Blender</h4>
+                            <p>Animação 3D</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">🌙</div>
+                            <h4>Moon Animator</h4>
+                            <p>Animação 3D</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUI/UI Page -->
+        <section id="gui-ui" class="page">
+            <div class="page-header">
+                <h1>GUI/UI</h1>
+                <p>Interfaces intuitivas para Roblox com design moderno e funcional. Criamos UIs que melhoram a experiência do usuário.</p>
+            </div>
+            <div class="container">
+                <!-- Gallery Filter -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="menu">Menus</button>
+                    <button class="filter-btn" data-filter="game">Game UI</button>
+                    <button class="filter-btn" data-filter="shop">Loja</button>
+                    <button class="filter-btn" data-filter="settings">Configurações</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="menu">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Main Menu">
+                        <div class="gallery-overlay">
+                            <h3>Main Menu - Interface Principal</h3>
+                            <p>Menu Interface</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="game">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Inventory UI">
+                        <div class="gallery-overlay">
+                            <h3>Inventory UI - Sistema de Inventário</h3>
+                            <p>Game UI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="settings">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Settings Panel">
+                        <div class="gallery-overlay">
+                            <h3>Settings Panel - Configurações</h3>
+                            <p>Settings UI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="shop">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Shop Interface">
+                        <div class="gallery-overlay">
+                            <h3>Shop Interface - Loja</h3>
+                            <p>Shop UI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="game">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="HUD Interface">
+                        <div class="gallery-overlay">
+                            <h3>HUD Interface - Heads Up Display</h3>
+                            <p>Game UI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="menu">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Character Select">
+                        <div class="gallery-overlay">
+                            <h3>Character Select - Seleção de Personagem</h3>
+                            <p>Menu Interface</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="shop">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Marketplace">
+                        <div class="gallery-overlay">
+                            <h3>Marketplace - Mercado</h3>
+                            <p>Shop UI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="settings">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop" alt="Profile Settings">
+                        <div class="gallery-overlay">
+                            <h3>Profile Settings - Perfil</h3>
+                            <p>Settings UI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="game">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop" alt="Chat Interface">
+                        <div class="gallery-overlay">
+                            <h3>Chat Interface - Sistema de Chat</h3>
+                            <p>Game UI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="menu">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop" alt="Loading Screen">
+                        <div class="gallery-overlay">
+                            <h3>Loading Screen - Tela de Carregamento</h3>
+                            <p>Menu Interface</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-section">
+                    <h3>Tipos de Interface</h3>
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="process-step-icon">🎮</div>
+                            <h4>Game UI</h4>
+                            <p>Interfaces de jogo e HUD</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">🛒</div>
+                            <h4>E-commerce UI</h4>
+                            <p>Lojas e sistemas de compra</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">⚙️</div>
+                            <h4>Settings UI</h4>
+                            <p>Painéis de configuração</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-icon">📊</div>
+                            <h4>Dashboard UI</h4>
+                            <p>Painéis de controle e dados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de visualização completa -->
+    <div class="image-modal" id="imageModal">
+        <div class="image-modal-content">
+            <button class="image-modal-close" id="modalClose">&times;</button>
+            <button class="image-modal-nav image-modal-prev" id="modalPrev">&larr;</button>
+            <button class="image-modal-nav image-modal-next" id="modalNext">&rarr;</button>
+            <img id="modalImage" src="" alt="">
+            <video id="modalVideo" controls style="display: none;">
+                <source src="" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+    </div>
+
+        <script src="script.js"></script>
+  </body>
+</html>
