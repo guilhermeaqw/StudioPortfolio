@@ -1612,8 +1612,8 @@ class LoveStudiosApp {
             'illustration': {
                 folder: 'Illustration',
                 title: 'Illustration',
-                description: 'Ilustrações digitais detalhadas que contam histórias visuais únicas.',
-                filters: ['Todos', 'Retratos', 'Ambientes', 'Personagens', 'Criaturas']
+                description: 'Detailed digital illustrations that tell unique visual stories.',
+                filters: []
             },
             '3d-model': {
                 folder: '3DModel',
