@@ -3654,3 +3654,25 @@ a:hover {
   --shadow-card: 0 8px 32px hsl(222, 15%, 8%, 0.5);
   --shadow-intense: 0 20px 60px hsl(270, 70%, 60%, 0.4);
 }
+
+/* Test Badge Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+.test-badge {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
