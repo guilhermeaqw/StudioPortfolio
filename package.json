@@ -1,0 +1,24 @@
+{
+  "name": "love-studios-portfolio",
+  "version": "1.0.0",
+  "description": "LOVE STUDIOS - Creative Portfolio for Roblox Development",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required for static site'",
+    "dev": "echo 'Run with live server or similar'",
+    "deploy": "echo 'Deploy via Netlify'"
+  },
+  "keywords": [
+    "portfolio",
+    "roblox",
+    "3d-modeling",
+    "animation",
+    "concept-art",
+    "game-development"
+  ],
+  "author": "LOVE STUDIOS",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

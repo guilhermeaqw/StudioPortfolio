@@ -36,3 +36,6 @@ yarn-error.log*
 # Arquivos de build (se houver)
 dist/
 build/
+
+# Netlify
+.netlify/
